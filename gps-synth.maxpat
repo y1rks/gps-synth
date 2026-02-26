@@ -9,8 +9,56 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 96.0, 1058.0, 852.0 ],
+        "rect": [ 1047.0, 197.0, 1058.0, 852.0 ],
         "boxes": [
+            {
+                "box": {
+                    "data": {
+                        "clips": [
+                            {
+                                "absolutepath": "Macintosh HD:/Users/yuichiro/Desktop/gps-synth/matataki.mp3",
+                                "filename": "matataki.mp3",
+                                "filekind": "audiofile",
+                                "id": "u451001292",
+                                "loop": 0,
+                                "content_state": {                                }
+                            }
+                        ]
+                    },
+                    "id": "obj-10",
+                    "maxclass": "playlist~",
+                    "mode": "basic",
+                    "numinlets": 1,
+                    "numoutlets": 5,
+                    "outlettype": [ "signal", "signal", "signal", "", "dictionary" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 26.0, 519.0, 150.0, 30.0 ],
+                    "quality": "basic",
+                    "saved_attribute_attributes": {
+                        "candicane2": {
+                            "expression": ""
+                        },
+                        "candicane3": {
+                            "expression": ""
+                        },
+                        "candicane4": {
+                            "expression": ""
+                        },
+                        "candicane5": {
+                            "expression": ""
+                        },
+                        "candicane6": {
+                            "expression": ""
+                        },
+                        "candicane7": {
+                            "expression": ""
+                        },
+                        "candicane8": {
+                            "expression": ""
+                        }
+                    }
+                }
+            },
             {
                 "box": {
                     "id": "obj-29",
@@ -42,7 +90,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 56.0, 392.0, 29.5, 22.0 ],
+                    "patching_rect": [ 26.0, 386.0, 29.5, 22.0 ],
                     "text": "1"
                 }
             },
@@ -82,7 +130,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "int" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 308.0, 636.0, 24.0, 24.0 ]
+                    "patching_rect": [ 270.0, 582.0, 24.0, 24.0 ]
                 }
             },
             {
@@ -92,7 +140,7 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 210.0, 625.0, 35.0, 22.0 ],
+                    "patching_rect": [ 210.0, 587.5, 35.0, 22.0 ],
                     "text": "open"
                 }
             },
@@ -150,7 +198,7 @@
                     "maxclass": "ezdac~",
                     "numinlets": 2,
                     "numoutlets": 0,
-                    "patching_rect": [ 44.0, 676.0, 45.0, 45.0 ]
+                    "patching_rect": [ 26.0, 725.0, 45.0, 45.0 ]
                 }
             },
             {
@@ -228,62 +276,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 20.0, 440.0, 113.0, 23.0 ],
+                    "patching_rect": [ 26.0, 440.0, 113.0, 23.0 ],
                     "text": "setclip 1 speed $1"
-                }
-            },
-            {
-                "box": {
-                    "data": {
-                        "clips": [
-                            {
-                                "absolutepath": "Macintosh HD:/Users/yuichiro/Desktop/web-buddha/public/matataki.mp3",
-                                "filename": "matataki.mp3",
-                                "filekind": "audiofile",
-                                "id": "u058010697",
-                                "loop": 1,
-                                "content_state": {
-                                    "speed": 1,
-                                    "loop": 1,
-                                    "pitchshift": 0.9000068443036227,
-                                    "timestretch": 1
-                                }
-                            }
-                        ]
-                    },
-                    "id": "obj-21",
-                    "maxclass": "playlist~",
-                    "mode": "basic",
-                    "numinlets": 1,
-                    "numoutlets": 5,
-                    "outlettype": [ "signal", "signal", "signal", "", "dictionary" ],
-                    "parameter_enable": 0,
-                    "patching_rect": [ 20.0, 488.0, 150.0, 30.0 ],
-                    "pitchshiftcent": [ -182 ],
-                    "quality": "basic",
-                    "saved_attribute_attributes": {
-                        "candicane2": {
-                            "expression": ""
-                        },
-                        "candicane3": {
-                            "expression": ""
-                        },
-                        "candicane4": {
-                            "expression": ""
-                        },
-                        "candicane5": {
-                            "expression": ""
-                        },
-                        "candicane6": {
-                            "expression": ""
-                        },
-                        "candicane7": {
-                            "expression": ""
-                        },
-                        "candicane8": {
-                            "expression": ""
-                        }
-                    }
                 }
             },
             {
@@ -370,7 +364,22 @@
             {
                 "patchline": {
                     "destination": [ "obj-26", 0 ],
+                    "midpoints": [ 397.5, 363.5, 249.5, 363.5 ],
                     "source": [ "obj-1", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-16", 1 ],
+                    "midpoints": [ 68.25, 562.0, 137.5, 562.0 ],
+                    "source": [ "obj-10", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-16", 0 ],
+                    "midpoints": [ 35.5, 562.0, 35.5, 562.0 ],
+                    "source": [ "obj-10", 0 ]
                 }
             },
             {
@@ -390,12 +399,14 @@
             {
                 "patchline": {
                     "destination": [ "obj-6", 0 ],
+                    "midpoints": [ 279.5, 675.5, 152.5, 675.5 ],
                     "source": [ "obj-12", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-2", 1 ],
+                    "midpoints": [ 61.0, 649.0, 61.5, 649.0 ],
                     "order": 1,
                     "source": [ "obj-16", 1 ]
                 }
@@ -403,6 +414,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-2", 0 ],
+                    "midpoints": [ 35.5, 649.0, 35.5, 649.0 ],
                     "order": 1,
                     "source": [ "obj-16", 0 ]
                 }
@@ -410,6 +422,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-6", 1 ],
+                    "midpoints": [ 61.0, 656.5, 202.5, 656.5 ],
                     "order": 0,
                     "source": [ "obj-16", 1 ]
                 }
@@ -417,6 +430,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-6", 0 ],
+                    "midpoints": [ 35.5, 656.5, 152.5, 656.5 ],
                     "order": 0,
                     "source": [ "obj-16", 0 ]
                 }
@@ -430,37 +444,28 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-16", 1 ],
-                    "source": [ "obj-21", 1 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-16", 0 ],
-                    "source": [ "obj-21", 0 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-9", 0 ],
                     "source": [ "obj-22", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-21", 0 ],
+                    "destination": [ "obj-10", 0 ],
+                    "midpoints": [ 172.5, 491.0, 35.5, 491.0 ],
                     "source": [ "obj-24", 0 ]
                 }
             },
             {
                 "patchline": {
-                    "destination": [ "obj-21", 0 ],
+                    "destination": [ "obj-10", 0 ],
+                    "midpoints": [ 35.5, 491.0, 35.5, 491.0 ],
                     "source": [ "obj-25", 0 ]
                 }
             },
             {
                 "patchline": {
                     "destination": [ "obj-24", 0 ],
+                    "midpoints": [ 249.5, 424.0, 172.5, 424.0 ],
                     "source": [ "obj-26", 0 ]
                 }
             },
@@ -478,7 +483,8 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-21", 0 ],
+                    "destination": [ "obj-10", 0 ],
+                    "midpoints": [ 381.5, 505.0, 35.5, 505.0 ],
                     "source": [ "obj-3", 0 ]
                 }
             },
@@ -498,6 +504,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-6", 0 ],
+                    "midpoints": [ 219.5, 669.0, 152.5, 669.0 ],
                     "source": [ "obj-8", 0 ]
                 }
             },
@@ -519,14 +526,6 @@
         ],
         "parameters": {
             "obj-16": [ "live.gain~[2]", "live.gain~", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
             "inherited_shortname": 1
         },
         "autosave": 0
